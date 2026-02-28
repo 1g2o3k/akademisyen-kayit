@@ -12,7 +12,7 @@ $tarih = str_replace("T", " ", $_POST['tarih']) ?? "";
 $tarih .=":00";
 $memleket=$_POST["memleket"] ?? "";
 try {
-    $pdo=new PDO("mysql:host=localhost;dbname=calismalar","root","1Gokalp12_");  
+    $pdo=new PDO("mysql:host=$host;dbname=c$dbnamer","$usr","psw");  
     $pdo->prepare("
     create table if not exists 
     bilgiler(
